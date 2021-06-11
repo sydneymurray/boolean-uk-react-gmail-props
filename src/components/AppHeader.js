@@ -1,5 +1,6 @@
 
 
+
 function AppHeader(prop){
     return(
         <header className="header">
@@ -16,8 +17,8 @@ function AppHeader(prop){
 
         <div className="search">
           <input className="search-bar" placeholder="Search mail" 
-            //onSubmit={() => prop.setSearchCritera(value)}
-            />
+            value = {prop.searchCriteria}
+            onChange={event => prop.setSearchCriteria(event.target.value)}/>
         </div>
       </header>
     )
